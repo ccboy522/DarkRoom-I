@@ -1,21 +1,11 @@
 #!\Users\ccboy\Python\DarkRoom-I-master\Rooms.py
 from sys import exit
 from random import randint
+from data import printdata
 
 def death():
-    ways = ["You have nothing to eat!",
-            "Your joke is less funny than your father's!",
-            "BOOOOOOOOOOOOOOOOOM",
-            "You died because you are too poor.",
-            "Your Mum kill you because you haven't do your homework yet."
-            "You died of fear."
-            "You died because you didn't do your homework."
-            "You're dead. There's no reason"
-            "Virus invasion!"
-            "Reject a face-saving offer."
-            "Get ready for your death!"]
     print("\nYOU LOSE!")
-    print(ways[int(randint(0,10))])
+    printdata()
     exit(0)
 class MainRoom(object):
     def begin():
@@ -51,3 +41,25 @@ Would you like to open the [gold] door or the [wood] door.\tBe careful!\n""")
             death()
         elif answer == "wood":
             print("PASS")
+            DiningRoom.begin()
+class DiningRoom(object):
+    def begin():
+        print("""Now you are in the DiningRoom.
+You can choose one food to eat.\tBe careful! Some of them are deleterious!
+FOODLIST:
+[1]. mushroom
+[2]. pizza
+[3]. nothing
+Enjoy it!""")
+        answer = int(input("Player:\n"))
+        if answer = 1:
+            print("PASS")
+            DiningRoom.next()
+        elif answer = 2:
+            death()
+        elif answer = 3:
+            print("PASS")
+            DiningRoom.next_2()
+        def next():
+            print("""Now you find that you can see at night.
+Use this ability well!""")

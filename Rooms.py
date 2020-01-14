@@ -13,33 +13,33 @@ class MainRoom(object):
         print("You: Aaaah! Where am I? Wait, I maybe in the…")
         print("GAME START")
         print("""Now you are in the MainRoom.
-You can [go] to the next room or [sleep].
+You can go to the next room or sleep.
 Input 'go' or 'sleep' to choose.\n""")
         answer = input("Player:\n")
-        if answer == "go":
+        if "go" in answer:
             print("PASS")
             BearRoom.begin()
-        elif answer == "sleep":
+        elif "sleep" in answer:
             death()
 class BearRoom(MainRoom):
     def begin():
         print("""Now a bear is in the middle of the room.
 It walks to you slowly.\tSuddenly, it runs to you.
-You can [catch] it or [run] away.\n""")
+You can catch it or run away.\n""")
         answer = input("Player:\n")
-        if answer == "catch":
+        if "catch" in answer:
             print("PASS")
             BearRoom.next()
-        elif answer == "run":
+        elif "run" in answer:
             death()
     def next():
         print("""You kill the bear.\tGood!
 Now there are two doors. One is made with gold. One is made with wood.
 Would you like to open the [gold] door or the [wood] door.\tBe careful!\n""")
         answer = input("Player:\n")
-        if answer == "gold":
+        if "gold" in answer:
             death()
-        elif answer == "wood":
+        elif "wood" in answer:
             print("PASS")
             DiningRoom.begin()
 class DiningRoom(object):

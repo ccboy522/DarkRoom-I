@@ -73,7 +73,7 @@ Enjoy it!""")
 Use this ability well!\n
 Suddenly, the lights are out, the darkness is over you.
 You are afraid. A few moments later, you see a man stand in the darkness.
-I'm the Thanos. Says the man. Give me the magic mushroom, or I'll ki-ki-ki-ki-Ahchoo you!
+I'm the Thanos. Says the man. Give me the magic mushroom, or I'll ki-ki-ki-ki-Ahchoo(writer:Thanos means kill) you!
 What? You say. You'll 'ki-ki-ki-ki-Ahchoo' me?
 I'll kill you! The man says. Give me the mushroom!
 Wait, if you kill me, no one can give you magic mushroom. You say.
@@ -86,4 +86,11 @@ I have to get rid of this fake Thanos! You think. But what can you do? run away?
         elif "beat" in answer:
             print("\n\tPASS\n")
         else:
+            death()
+    def next_2():
+        print("You are now very hungry and you're hallucinating. You see a hanburger. Do you want to eat it?")
+        answer = input("Player:\n")
+        if "es" in answer:
+            DiningRoom.end()
+        elif "o" in answer:
             death()
